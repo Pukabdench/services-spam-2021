@@ -265,4 +265,3 @@ callServices:
   body: '_csrf=t0T20Uzq6471RBB6Yvfj-mMGFDWWHPGKgGpIRGH3pTCAHYWyfqGe6YFpIxhUkbGXIXJdcs9EmPDoOz4xJ87sfQ%3D%3D&LoginForm%5Borg%5D=maxim&LoginForm%5Bcountry%5D=RU&LoginForm%5BbaseId%5D=133&LoginForm%5BsendCodeType%5D=2&LoginForm%5Bphone%5D=%2B<num9>&LoginForm%5Bagree%5D=1'
   okRes: '{"success":true,"message":"Звоним...\r\nПоследние 4 цифры номера телефона поступившего звонка нужно ввести в поле «Код».","data":{"message":"Звоним...\r\nПоследние 4 цифры номера телефона поступившего звонка нужно ввести в поле «Код».","success":true,"nextTryInSeconds":60},"errors":[],"rateLimited":null}'
   delay: 61
-y: 61
